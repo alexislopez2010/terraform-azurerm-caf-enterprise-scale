@@ -23,7 +23,7 @@ module "management_group_archetypes" {
 # data used to deploy platform resources based on the
 # "management" landing zone archetype.
 module "management_resources" {
-  source = "./modules/management"
+  source = "github.com/alexislopez2010/terraform-azurerm-caf-enterprise-scale/modules/management"
 
   # Mandatory input variables
   enabled         = local.deploy_management_resources
@@ -50,7 +50,7 @@ module "management_resources" {
 # data used to deploy platform resources based on the
 # "identity" landing zone archetype.
 module "identity_resources" {
-  source = "./modules/identity"
+  source = "github.com/alexislopez2010/terraform-azurerm-caf-enterprise-scale/modules/identity"
 
   # Mandatory input variables
   enabled  = local.deploy_identity_resources
@@ -62,7 +62,7 @@ module "identity_resources" {
 # data used to deploy platform resources based on the
 # "connectivity" landing zone archetype.
 module "connectivity_resources" {
-  source = "./modules/connectivity"
+  source = "github.com/alexislopez2010/terraform-azurerm-caf-enterprise-scale/modules/connectivity"
 
   # Mandatory input variables
   enabled         = local.deploy_connectivity_resources
